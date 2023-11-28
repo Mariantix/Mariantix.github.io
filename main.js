@@ -1,9 +1,8 @@
 console.log ('Hello, World!');
 
 var footer = document.getElementById("FOOTER");
-var currentYear = newDate().getFullYear(); { 
-document.getElementById("currentYear").innerHTML = currentYear;
-}
+    document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
+
 function myFunction() {
 document.getElementById("alerting").innerHTML = "Hello World";
 }
