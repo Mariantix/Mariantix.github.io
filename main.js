@@ -17,3 +17,11 @@ function changeText(text) {
           display.innerHTML = "Hola";
           display.innerHTML = text;
     }
+
+    let increment = document.getElementById("increment")
+    let counter = document.getElementById("counter")
+    let count = 0
+
+    function adding() {
+        counter.textContent = ++count
+    }

@@ -52,13 +52,32 @@
                     </tr>
                 </table>
             </section>
-
+           
             <body>
-                <div id="box" onmouseover="changeText('Yes, this is Onmouse Text')" onmouseout="changeback('any thing')">
+                <div class="frame">
+                    <div id="counter">0</div>
+                    <button id="increment" onclick="adding()">Add me up</button>
+                    <button id="reset"> Let's start again </button>
+                </div>
+            </body>
+           
+            <h2>
+                <style>
+                    #box {
+                    width: 80%;
+                    height: 150px;
+                    margin-left: 20px;
+                    margin-top: 20px;
+                    padding: 15px;
+                    border: 5px solid black;
+                    }
+                    </style>
+            <body>
+                <div id="box" onmouseover="changeText('Want to know what is behind here?')" onmouseout="changeback('It is nothing')">
                 <div id="text-display"> </div>
                 </div>
             </body>
-
+            </h2>
             <h2> Contact </h2>
             <section id="#contact">
                 <p> Feel free to reach out with any inquiries! </p>
