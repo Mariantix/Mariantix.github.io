@@ -6,3 +6,14 @@ var footer = document.getElementById("FOOTER");
 function myFunction() {
 document.getElementById("alerting").innerHTML = "Hello World";
 }
+
+function changeText(text) {
+    var display = document.getElementById('text-display');
+      display.innerHTML = "Hello";
+      display.innerHTML = text;
+}
+    function changeback(text){
+        var display = document.getElementById('text-display');
+          display.innerHTML = "Hola";
+          display.innerHTML = text;
+    }
