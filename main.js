@@ -1,12 +1,15 @@
 console.log ('Hello, World!');
 
+//footer//
 var footer = document.getElementById("FOOTER");
     document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
 
+//alert button//
 function myFunction() {
 document.getElementById("alerting").innerHTML = "Hello World";
 }
 
+//hover button//
 function changeText(text) {
     var display = document.getElementById('text-display');
       display.innerHTML = "Hello";
@@ -18,25 +21,35 @@ function changeText(text) {
           display.innerHTML = text;
     }
 
-    let increment = document.getElementById("increment")
-    let counter = document.getElementById("counter")
-    let count = 0
+//incrementing button - if-else//
+let count = 1;
+const txtCounter = document.getElementById('txt-counter');
 
-    function adding() {
-        counter.textContent = ++count
+document.getElementById('btn-counter').onclick = () => {
+    count = count + 1;
+
+    if (count % 2 === 0) {
+        txtCounter.innerHTML = 'Number: ${count}';
+        txtCounter.style.color = 'red';
+        txtCounter.classlist.remove('odd');
+        txtCounter.classlist.add('even');
+    } else {
+        txtCounter.innerHTML = 'Number: ${count}';
+        txtCounter.style.color = 'white';
+        txtCounter.classList.remove('even');
+        txtCounter.classList.add('odd');
     }
+};
 
+//loop//
+ const numbersList = document.getElementById('numbers');
 
-    var array = [1,2,3, "mm", "b", "c", "mm", "y", "mm"];
-    var list = document.getElementById("list");
+ for (let i = 1; i <= 100; i++) {
+    const listItem = document.createElement('li');
+    listItem.textContent = i % 2 === 0 ? 'even' : 'odd' ;
+    numbersList.appendChild(listItem);
 
-    function addText(array) {
-        array.map(function(element) {
-            if(element === 'm') {
-                var listItem = document.createElement('LI');
-                listItem.textContent = element;
-                list.appendChild(listItem);
-            }
-        });
-    }
-    addText(array);
+    console.log('List Item', i, ':', listItem.text.Content);
+ }
+ 
+
