@@ -25,3 +25,18 @@ function changeText(text) {
     function adding() {
         counter.textContent = ++count
     }
+
+
+    var array = [1,2,3, "mm", "b", "c", "mm", "y", "mm"];
+    var list = document.getElementById("list");
+
+    function addText(array) {
+        array.map(function(element) {
+            if(element === 'm') {
+                var listItem = document.createElement('LI');
+                listItem.textContent = element;
+                list.appendChild(listItem);
+            }
+        });
+    }
+    addText(array);
